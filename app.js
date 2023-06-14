@@ -20,20 +20,20 @@ function displayLibraryBooks(){
         bookDiv.classList.add('book-tile');
 
         const bookTitle = document.createElement('p');
-        bookTitle.textContent = book.title;
+        bookTitle.textContent = `Title: ${book.title}`;
         bookDiv.appendChild(bookTitle);
 
         const bookAuthor = document.createElement('p');
-        bookAuthor.textContent = book.author;
+        bookAuthor.textContent = `Author: ${book.author}`;
         bookDiv.appendChild(bookAuthor);
 
         const bookPages = document.createElement('p');
-        bookPages.textContent = book.pages;
+        bookPages.textContent = `${book.pages} pages`;
         bookDiv.appendChild(bookPages);
 
-        const isRead = document.createElement('p');
-        isRead.textContent = book.read;
-        bookDiv.appendChild(isRead);
+        // const isRead = document.createElement('p');
+        // isRead.textContent = book.read;
+        // bookDiv.appendChild(isRead);
 
         const removeBook = document.createElement('button');
         removeBook.textContent = "remove";
