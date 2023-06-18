@@ -38,6 +38,11 @@ form {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     min-height: 100vh;
+    border-right: black 2px solid ;
+}
+
+input {
+    border: none;
 }
 
 input[type=text] {
