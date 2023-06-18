@@ -21,6 +21,10 @@ function displayLibraryBooks(){
         const bookDiv = document.createElement('div');
         bookDiv.classList.add('book-tile');
 
+        if (myLibrary.indexOf(book) == myLibrary.length - 1){
+            bookDiv.classList.add('new-tile');
+        }
+
         const bookTitle = document.createElement('p');
         bookTitle.textContent = `Title: ${book.title}`;
         bookDiv.appendChild(bookTitle);
@@ -34,7 +38,7 @@ function displayLibraryBooks(){
         bookDiv.appendChild(bookPages);
 
         const removeBook = document.createElement('button');
-        removeBook.textContent = "remove";
+        removeBook.textContent = "Remove";
         removeBook.classList.add('remove-btn');
         removeBook.addEventListener('click', event => {
             myLibrary.splice(myLibrary.indexOf(book), 1);
@@ -61,7 +65,7 @@ function displayLibraryBooks(){
 const bookForm = document.querySelector('form');
 
 bookForm.addEventListener('submit', event => {
-    event.preventDefault;
+    event.preventDefault();
     const title = event.target['title'].value;
     const author = event.target['author'].value;
     const pages = event.target['pages'].value;

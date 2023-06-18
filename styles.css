@@ -16,6 +16,12 @@ main {
     background-color: #FFD89C;
     border-radius: 1rem;
     padding: 1rem;
+    border: 2px solid #ebbc72;
+    font-weight: bold;
+}
+
+.new-tile {
+    animation: append-animate .3s ease;
 }
 
 .books {
@@ -70,4 +76,22 @@ form > label {
     border: none;
     border-radius: 5px;
     margin-right: 1em;
+    border: 2px solid #ebbc72;
+
+}
+
+.book-tile > button:hover {
+    transition: 0.3s;
+    transform:scale(1.1);
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
 }
