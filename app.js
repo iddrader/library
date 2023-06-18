@@ -1,10 +1,12 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 function addBookToLibrary(title, author, pages, read){
@@ -30,10 +32,6 @@ function displayLibraryBooks(){
         const bookPages = document.createElement('p');
         bookPages.textContent = `${book.pages} pages`;
         bookDiv.appendChild(bookPages);
-
-        // const isRead = document.createElement('p');
-        // isRead.textContent = book.read;
-        // bookDiv.appendChild(isRead);
 
         const removeBook = document.createElement('button');
         removeBook.textContent = "remove";
